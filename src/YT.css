@@ -1,0 +1,114 @@
+/* YT BUTTON */
+.button-container {
+    display: block;
+    width: 200px;
+    margin: 50px auto;
+}
+
+.first {
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 40px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background: linear-gradient(90deg, #c0c0aa, #1cefff);
+}
+
+.second {
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 40px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background: linear-gradient(90deg, #C6FFDD, #FBD786, #f7797d);
+}
+
+.third {
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 40px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
+}
+
+.fourth {
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 40px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background: linear-gradient(90deg, #544a7d, #ffd452);
+}
+
+.fifth {
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 40px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background: linear-gradient(90deg, #009FFF, #ec2F4B);
+}
+
+.effect-container {
+    position: relative;
+    overflow: hidden;
+
+    --effect-name: ripple;
+    --effect-duration: 1000ms;
+    --effect-top: 0px;
+    --effect-left: 0px;
+    --effect-height: 100px;
+    --effect-width: 100px;
+    --effect-color: white;
+}
+
+.effect-container::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3s;
+
+    top: var(--effect-top);
+    left: var(--effect-left);
+    height: var(--effect-height);
+    width: var(--effect-width);
+    border-radius: 50%;
+    transform: 50%;
+    transform: scale(0);
+    background: var(--effect-color);
+}
+
+.effect-container.active::before {
+    border-radius: 50%;
+    animation: dispersion var(--effect-duration) linear forwards;
+}
+
+@keyframes dispersion {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+
